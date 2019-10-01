@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class SizeSetting extends Component {
 
-    changeSize(value){
+    changeSize=(value)=>{
         this.props.onChangSize(value);
     }
 

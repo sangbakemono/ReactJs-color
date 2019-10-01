@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 
-class Result extends Component {
-    constructor(props) {
-        super(props);
-        console.log('aaa')
-    }    
+class Result extends Component {   
 
     setStyle(){
         return{
@@ -19,7 +15,7 @@ class Result extends Component {
                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <p>color: {this.props.color} - Fontsize: {this.props.fontSize} px</p>
                     <div id="content" style={this.setStyle()}>
-                        nội dung setting
+                        Phạm Tấn Sang - SenBakemono
                     </div>
                 </div>
         );

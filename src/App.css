@@ -32,16 +32,22 @@
   }
 }
 .mt-50{
-    margin-top: 50px;
+    margin-top: 30px;
+}
+h2{
+  text-align: center;
+  font-weight: bold;
+  font-size: 20pt;
+  color: #cca343;
 }
 span{
   padding: 10px 20px;
-  margin: 10px;
+  margin: 9px;
   cursor: pointer;
-  font-size: 20pt;
 }
 p{
   font-size: 18pt;
+  color: #e6633c;
 }
 .active{
   border: solid 3px black;

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Reset extends Component {
 
-    onResetDefault=() =>{
+    onResetDefault=()=>{
         this.props.onSettingDefault(true);
     }
 

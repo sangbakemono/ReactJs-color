@@ -10,10 +10,10 @@ class App extends Component {
     super(props);
     this.state ={
       color: 'red',
-      fontSize: 12
+      fontSize: 16
     };
-    this.onChangSize = this.onChangSize.bind(this);
-    this.onSettingDefault = this.onSettingDefault.bind(this);
+    // this.onChangSize = this.onChangSize.bind(this);
+    // this.onSettingDefault = this.onSettingDefault.bind(this);
   }
   
   onSetColor = (params) => {
@@ -22,37 +22,39 @@ class App extends Component {
     });
   }
 
-  onChangSize(value){
+  onChangSize =(value) =>{
     this.setState({
-      fontSize: (this.state.fontSize + value >= 8 && this.state.fontSize + value <=36) ? this.state.fontSize + value : this.state.fontSize
+      fontSize: (this.state.fontSize + value >= 8 && this.state.fontSize + value <=48) ? this.state.fontSize + value : this.state.fontSize
     });
   }
 
-  onSettingDefault(value){
+  onSettingDefault= (value) =>{
     if(value){
       this.setState({
         color: 'red',
-        fontSize: 12
+        fontSize: 16
       });
     }
   }
 
   render() {
     return (
-      <div>       
-        <div className="container mt-50">          
-          <div className="row">
-            <ColorPicker color={this.state.color} onReceiveColor={this.onSetColor}/>
-            <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">              
-                <SizeSetting 
-                    fontSize={this.state.fontSize}
-                    onChangSize={this.onChangSize}/>                  
-                <Reset onSettingDefault={this.onSettingDefault}/>                           
-            </div>            
-                <Result color={this.state.color} fontSize={this.state.fontSize}/>      
-          </div>          
-        </div>       
-      </div>
+        <div>
+            <div className="container mt-50">
+                <h2>Ứng dụng chuyển đổi màu chữ và font chữ</h2>
+                <br />
+                <div className="row">
+                    <ColorPicker color={this.state.color} onReceiveColor={this.onSetColor} />
+                    <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <SizeSetting
+                            fontSize={this.state.fontSize}
+                            onChangSize={this.onChangSize} />
+                        <Reset onSettingDefault={this.onSettingDefault} />
+                    </div>
+                    <Result color={this.state.color} fontSize={this.state.fontSize} />
+                </div>
+            </div>
+        </div>
     );
   }
 }
